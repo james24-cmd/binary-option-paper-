@@ -1,0 +1,199 @@
+/* Binary Options Trading Bot — Dark Trading Terminal Theme */
+
+/* ── Global ── */
+[data-testid="stAppViewContainer"] {
+    background: linear-gradient(135deg, #0a0e17 0%, #111827 50%, #0f172a 100%);
+    color: #e2e8f0;
+}
+
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #0d1321 0%, #141c2e 100%);
+    border-right: 1px solid rgba(56, 189, 248, 0.15);
+}
+
+[data-testid="stHeader"] {
+    background: transparent;
+}
+
+/* ── Metrics ── */
+[data-testid="stMetric"] {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 12px;
+    padding: 16px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+[data-testid="stMetric"]:hover {
+    border-color: rgba(56, 189, 248, 0.5);
+    box-shadow: 0 4px 25px rgba(56, 189, 248, 0.15);
+    transform: translateY(-2px);
+}
+
+[data-testid="stMetricLabel"] {
+    color: #94a3b8 !important;
+    font-size: 0.75rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+[data-testid="stMetricValue"] {
+    color: #f1f5f9 !important;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace !important;
+}
+
+/* ── Tabs ── */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px;
+    background: rgba(15, 23, 42, 0.5);
+    border-radius: 12px;
+    padding: 4px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background: transparent;
+    border-radius: 8px;
+    color: #94a3b8;
+    font-weight: 600;
+    padding: 8px 20px;
+    transition: all 0.2s ease;
+}
+
+.stTabs [aria-selected="true"] {
+    background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%) !important;
+    color: white !important;
+}
+
+/* ── Buttons ── */
+.stButton > button {
+    background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    padding: 10px 24px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(14, 165, 233, 0.5);
+}
+
+/* ── DataFrames / Tables ── */
+[data-testid="stDataFrame"] {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.stDataFrame table {
+    background: rgba(15, 23, 42, 0.7) !important;
+}
+
+.stDataFrame th {
+    background: rgba(30, 41, 59, 0.9) !important;
+    color: #94a3b8 !important;
+    font-size: 0.7rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.stDataFrame td {
+    color: #e2e8f0 !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 0.85rem !important;
+}
+
+/* ── Expander ── */
+.streamlit-expanderHeader {
+    background: rgba(15, 23, 42, 0.7) !important;
+    border: 1px solid rgba(56, 189, 248, 0.15) !important;
+    border-radius: 10px !important;
+    color: #e2e8f0 !important;
+}
+
+/* ── Alerts / Status boxes ── */
+.stAlert {
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+}
+
+/* ── Progress bar ── */
+.stProgress > div > div {
+    background: linear-gradient(90deg, #0ea5e9, #6366f1) !important;
+    border-radius: 10px;
+}
+
+/* ── Dividers ── */
+hr {
+    border-color: rgba(56, 189, 248, 0.15) !important;
+}
+
+/* ── Markdown text ── */
+.stMarkdown p {
+    color: #cbd5e1;
+}
+
+.stMarkdown h1, .stMarkdown h2, .stMarkdown h3 {
+    color: #f1f5f9 !important;
+    font-weight: 700;
+}
+
+/* ── Sidebar specific ── */
+[data-testid="stSidebar"] .stMarkdown p {
+    color: #94a3b8;
+}
+
+[data-testid="stSidebar"] .stMarkdown h2 {
+    background: linear-gradient(90deg, #0ea5e9, #6366f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.3rem;
+}
+
+/* ── Custom status indicators ── */
+.risk-ok {
+    color: #22c55e;
+}
+
+.risk-warn {
+    color: #f59e0b;
+}
+
+.risk-danger {
+    color: #ef4444;
+}
+
+/* ── Animate pulsing dot ── */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+.live-dot {
+    animation: pulse 2s infinite;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0e17;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(56, 189, 248, 0.3);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(56, 189, 248, 0.5);
+}
